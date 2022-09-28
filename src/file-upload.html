@@ -6,15 +6,7 @@
 
         @@include("partials/head-css.html")
 
-        <style>
-          .input-plus {
-            display: flex;
-          }
-    
-          .input-field {
-            display: block;
-          }
-        </style>
+       
 
     </head>
 
@@ -55,23 +47,20 @@
                                                         <form name="fileForm" method="POST" enctype="multipart/form-data" data-netlify="true" class="auth-form">
                                                             <div class="mb-3">
                                                                 <label for="nameInput" class="form-label">Your Name</label>
-                                                                <input type="text" class="form-control" required id="nameInput" placeholder="Enter your name">
+                                                                <input name="name" type="text" class="form-control" required id="nameInput" placeholder="Enter your name">
                                                             </div>
                                                             <div class="mb-3">
-                                                              <label for="fileInput" class="form-label">File</label>
-                                                              <fieldset id="file-list">
-                                                                <input class="form-control" name="files[]" type="file" required id="fileInput"/>
-                                                              </fieldset>
+                                                                <fieldset id="file-list">
+                                                                <div class="input-group">
+                                                                    <input name="file_field" required type="file" class="form-control" id="inputGroupFile04" aria-describedby="file" aria-label="Upload">
+                                                                    <button class="btn btn-light btn-sm" onclick="addFileField()" type="button">+</button>
+                                                                </fieldset>
                                                             </div>
-                                                          <button type="button" class="btn btn-secondary" onclick="addFileField()">
-                                                            <i class="uil uil-plus text-light"></i> Add Files
-                                                          </button>
                                                             
                                                             <div class="text-center">
                                                                 <button type="submit" class="btn btn-white btn-hover w-100 mt-4">Submit Files</buttom>
                                                             </div>
                                                         </form>
-                                                        <p class="result"></p>
                                                     </div>
                                                 </div>
                                             </div><!--end col-->
@@ -99,21 +88,50 @@
         <script src="assets/js/pages/switcher.init.js"></script>
 
         <script>
-          const myForm = document.getElementById("file-list");
-          
-          function addFileField() {
-            // create an input field to insert
-            const newFileField = document.createElement("input");
-            // set input field data type to text
-            newFileField.type = "file";
-            // set input field name
-            newFileField.name = "files";
-    
-            newFileField.classList.add("form-control","mt-3");
-    
-            // insert element
-            myForm.appendChild(newFileField);
-          }
+            const fileForm = document.getElementById("file-list");
+
+function addFileField() {
+	// Create elements
+	const nef_wrapper = document.createElement("div");
+	const nef = document.createElement("input");
+	const btnAdd = document.createElement("button");
+	const btnDel = document.createElement("button");
+
+	// Add Class to main wrapper
+	nef_wrapper.classList.add("input-group");
+
+	// set button ADD
+	btnAdd.type = "button";
+	btnAdd.classList.add("btn", "btn-light", "btn-sm");
+	btnAdd.innerText = "+";
+	btnAdd.setAttribute("onclick", "addFileField()");
+
+	// set button DEL
+	btnDel.type = "button";
+	btnDel.classList.add("btn", "btn-warning", "btn-sm");
+	btnDel.innerText = "-";
+
+	// set Input field
+	nef.type = "file";
+	nef.name = "file_field";
+    nef.setAttribute("required", "");
+	nef.classList.add("form-control");
+
+	//append elements to main wrapper
+	nef_wrapper.appendChild(nef);
+	nef_wrapper.appendChild(btnAdd);
+	nef_wrapper.appendChild(btnDel);
+
+	// append element to DOM
+	fileForm.appendChild(nef_wrapper);
+	btnDel.addEventListener("click", removeFileField);
+}
+
+//remove element from DOM
+function removeFileField(el) {
+	const field = el.target.parentElement;
+	field.remove();
+}
         </script>
 
     </body>
