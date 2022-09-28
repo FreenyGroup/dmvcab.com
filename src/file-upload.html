@@ -1,0 +1,120 @@
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Sign Up"})
+
+        @@include("partials/head-css.html")
+
+        <style>
+          .input-plus {
+            display: flex;
+          }
+    
+          .input-field {
+            display: block;
+          }
+        </style>
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div>
+
+            
+            <div class="main-content">
+
+                <div class="page-content">
+
+                    <!-- START SIGN-UP -->
+                    <section class="bg-auth">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-xl-10 col-lg-12">
+                                    <div class="card auth-box">
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-6 text-center">
+                                                <div class="card-body p-4">
+                                                    <a href="index.html">
+                                                        <img src="assets/images/logo-light.png" alt="" class="logo-light">
+                                                        <img src="assets/images/logo-dark.png" alt="" class="logo-dark">
+                                                    </a>
+                                                    <div class="mt-5">
+                                                        <img src="assets/images/auth/sign-up.png" alt="" class="img-fluid">
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-6">
+                                                <div class="auth-content card-body p-5 text-white">
+                                                    <div class="w-100">
+                                                        <div class="text-center">
+                                                            <h5>Send Us Your DMVCAB Driver Required Files</h5>
+                                                        </div>
+                                                        <form name="fileForm" method="POST" enctype="multipart/form-data" data-netlify="true" class="auth-form">
+                                                            <div class="mb-3">
+                                                                <label for="nameInput" class="form-label">Your Name</label>
+                                                                <input type="text" class="form-control" required id="nameInput" placeholder="Enter your name">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                              <label for="fileInput" class="form-label">File</label>
+                                                              <fieldset id="file-list">
+                                                                <input class="form-control" name="files[]" type="file" required id="fileInput"/>
+                                                              </fieldset>
+                                                            </div>
+                                                          <button type="button" class="btn btn-secondary" onclick="addFileField()">
+                                                            <i class="uil uil-plus text-light"></i> Add Files
+                                                          </button>
+                                                            
+                                                            <div class="text-center">
+                                                                <button type="submit" class="btn btn-white btn-hover w-100 mt-4">Submit Files</buttom>
+                                                            </div>
+                                                        </form>
+                                                        <p class="result"></p>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                    </div><!--end auth-box-->
+                                </div><!--end col-->
+                            </div><!--end row-->
+                        </div><!--end container-->
+                    </section>
+                    <!-- END SIGN-UP -->
+                    
+                </div>
+                <!-- End Page-content -->
+
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+        @@include("partials/switcher.html")
+
+        @@include("partials/vendor-scripts.html")
+
+        <!-- Switcher Js -->
+        <script src="assets/js/pages/switcher.init.js"></script>
+
+        <script>
+          const myForm = document.getElementById("file-list");
+          
+          function addFileField() {
+            // create an input field to insert
+            const newFileField = document.createElement("input");
+            // set input field data type to text
+            newFileField.type = "file";
+            // set input field name
+            newFileField.name = "files";
+    
+            newFileField.classList.add("form-control","mt-3");
+    
+            // insert element
+            myForm.appendChild(newFileField);
+          }
+        </script>
+
+    </body>
+</html>

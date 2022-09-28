@@ -407,11 +407,11 @@ body[data-layout-mode=dark] .bg-footer, body[data-layout-mode=dark] .footer-alt 
 }
 
 .bg-soft-warning {
-  background-color: rgba(247, 204, 83, 0.15) !important;
-  color: #f7cc53 !important;
+  background-color: rgba(244, 145, 32, 0.15) !important;
+  color: #F49120 !important;
 }
 .bg-soft-warning .border {
-  border-color: #f7cc53 !important;
+  border-color: #F49120 !important;
 }
 
 .bg-soft-danger {
@@ -447,11 +447,11 @@ body[data-layout-mode=dark] .bg-footer, body[data-layout-mode=dark] .footer-alt 
 }
 
 .bg-soft-purple {
-  background-color: rgba(118, 109, 244, 0.15) !important;
-  color: #766df4 !important;
+  background-color: rgba(150, 24, 53, 0.15) !important;
+  color: #961835 !important;
 }
 .bg-soft-purple .border {
-  border-color: #766df4 !important;
+  border-color: #961835 !important;
 }
 
 .bg-soft-blue {
@@ -2197,7 +2197,7 @@ body[data-layout-mode=dark] .accordion-button {
   font-size: 12px;
   font-weight: 500;
   line-height: 10px;
-  background: #766df4;
+  background: #961835;
   position: relative;
   text-transform: uppercase;
   display: inline-block;
@@ -2208,7 +2208,7 @@ body[data-layout-mode=dark] .accordion-button {
   position: absolute;
   border-top: 11px solid transparent;
   border-bottom: 11px solid transparent;
-  border-right: 11px solid #766df4;
+  border-right: 11px solid #961835;
   left: -11px;
   top: 0;
 }
@@ -2584,7 +2584,7 @@ ul.pattern li .color-list {
   margin: 5px;
 }
 ul.pattern .color1 {
-  background-color: #766df4;
+  background-color: #961835;
 }
 ul.pattern .color2 {
   background-color: #1f86ef;
