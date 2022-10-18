@@ -1656,6 +1656,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^9.0.0":
+  version: 9.4.1
+  resolution: "commander@npm:9.4.1"
+  checksum: bfb18e325a5bdf772763c2213d5c7d9e77144d944124e988bcd8e5e65fb6d45d5d4e86b09155d0f2556c9a59c31e428720e57968bcd050b2306e910a0bf3cf13
+  languageName: node
+  linkType: hard
+
 "component-bind@npm:1.0.0":
   version: 1.0.0
   resolution: "component-bind@npm:1.0.0"
@@ -1931,6 +1938,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cssesc@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "cssesc@npm:3.0.0"
+  bin:
+    cssesc: bin/cssesc
+  checksum: f8c4ababffbc5e2ddf2fa9957dda1ee4af6048e22aeda1869d0d00843223c1b13ad3f5d88b51caa46c994225eacb636b764eb807a8883e2fb6f99b4f4e8c48b2
+  languageName: node
+  linkType: hard
+
 "cssnano@npm:^3.0.0":
   version: 3.10.0
   resolution: "cssnano@npm:3.10.0"
@@ -2001,6 +2017,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cwebp-bin@npm:^5.0.0":
+  version: 5.1.0
+  resolution: "cwebp-bin@npm:5.1.0"
+  dependencies:
+    bin-build: ^3.0.0
+    bin-wrapper: ^4.0.1
+    logalot: ^2.1.0
+  bin:
+    cwebp: cli.js
+  checksum: c6a823083d9c510474cc9137d01fb4e9c4816b348c1dfa0138dc7721338363e5f30411662b921de0927faad6745b4179599cb524749478024376f0c06b51bb43
+  languageName: node
+  linkType: hard
+
+"cwebp-bin@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "cwebp-bin@npm:7.0.1"
+  dependencies:
+    bin-build: ^3.0.0
+    bin-wrapper: ^4.0.1
+  bin:
+    cwebp: cli.js
+  checksum: 89cdf06ee069161571b43153bbeeb1835b6dba1fcef12d19f8a9c289be74e035ff5679b2f45bdef8ee42a4cf71e3fb0d80f8a51d1b19c9c523bf3252685f667f
+  languageName: node
+  linkType: hard
+
 "d@npm:1, d@npm:^1.0.1":
   version: 1.0.1
   resolution: "d@npm:1.0.1"
@@ -2025,12 +2066,15 @@ __metadata:
     gulp-cache: ^1.1.3
     gulp-cached: 1.1.1
     gulp-clean-css: ^4.2.0
+    gulp-clone: ^2.0.1
     gulp-cssnano: 2.1.3
     gulp-file-include: 2.0.1
     gulp-if: 2.0.2
+    gulp-ignore: ^3.0.0
     gulp-image: ^6.3.1
     gulp-imagemin: 7.1.0
     gulp-npm-dist: ^1.0.3
+    gulp-purgecss: ^5.0.0
     gulp-rename: ^1.4.0
     gulp-replace: 1.0.0
     gulp-rtlcss: ^1.4.1
@@ -2038,7 +2082,9 @@ __metadata:
     gulp-sourcemaps: ^2.6.5
     gulp-uglify: 3.0.2
     gulp-useref-plus: 0.0.8
+    gulp-webp: ^4.0.1
     gumshoejs: ^5.1.2
+    imagemin-webp: ^7.0.0
     masonry-layout: ^4.2.2
     nouislider: ^14.6.3
     pagecrypt: ^5.4.0
@@ -2691,8 +2737,8 @@ __metadata:
   linkType: hard
 
 "es-abstract@npm:^1.17.2, es-abstract@npm:^1.19.0, es-abstract@npm:^1.19.1, es-abstract@npm:^1.19.2, es-abstract@npm:^1.19.5, es-abstract@npm:^1.20.1":
-  version: 1.20.3
-  resolution: "es-abstract@npm:1.20.3"
+  version: 1.20.4
+  resolution: "es-abstract@npm:1.20.4"
   dependencies:
     call-bind: ^1.0.2
     es-to-primitive: ^1.2.1
@@ -2704,7 +2750,7 @@ __metadata:
     has-property-descriptors: ^1.0.0
     has-symbols: ^1.0.3
     internal-slot: ^1.0.3
-    is-callable: ^1.2.6
+    is-callable: ^1.2.7
     is-negative-zero: ^2.0.2
     is-regex: ^1.1.4
     is-shared-array-buffer: ^1.0.2
@@ -2718,7 +2764,7 @@ __metadata:
     string.prototype.trimend: ^1.0.5
     string.prototype.trimstart: ^1.0.5
     unbox-primitive: ^1.0.2
-  checksum: 225f24966ed960868bcfa7b39b38c9f4b68d1e0351e4e052a199e3e2fd93838a28b050687a0edf1021c20173d0831d076ff33ec581de77ca8aded67e2e138a80
+  checksum: 89297cc785c31aedf961a603d5a07ed16471e435d3a1b6d070b54f157cf48454b95cda2ac55e4b86ff4fe3276e835fcffd2771578e6fa634337da49b26826141
   languageName: node
   linkType: hard
 
@@ -3141,7 +3187,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"file-type@npm:^10.4.0":
+"file-type@npm:^10.4.0, file-type@npm:^10.5.0":
   version: 10.11.0
   resolution: "file-type@npm:10.11.0"
   checksum: cadd8cd187692dcde637a3ff53bb51c5d935633fc8085e7d25bfb3b4bf995e14a43f2baf71bdcb9d7235b3e725bd158b75d25911fa2f73e5812955382228c511
@@ -3162,7 +3208,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"file-type@npm:^4.2.0":
+"file-type@npm:^4.2.0, file-type@npm:^4.3.0":
   version: 4.4.0
   resolution: "file-type@npm:4.4.0"
   checksum: f3e0b38bef643a330b3d98e3aa9d6f0f32d2d80cb9341f5612187bd53ac84489a4dc66b354bd0cff6b60bff053c7ef21eb8923d62e9f1196ac627b63bd7875ef
@@ -3848,7 +3894,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^8.0.1":
+"glob@npm:^8.0.1, glob@npm:^8.0.3":
   version: 8.0.3
   resolution: "glob@npm:8.0.3"
   dependencies:
@@ -4063,6 +4109,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gulp-clone@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "gulp-clone@npm:2.0.1"
+  dependencies:
+    plugin-error: ^0.1.2
+    through2: ^2.0.3
+  checksum: c195a26d296b7105c24f5d3df0fa0c95a53111baf2a0c8218f7ebc2eaad72dfb434a9427b0ef40a227fce435a5afa79533e6c1cd4bb987ea3b830d15a6f77025
+  languageName: node
+  linkType: hard
+
 "gulp-concat@npm:^2.5.2":
   version: 2.6.1
   resolution: "gulp-concat@npm:2.6.1"
@@ -4110,6 +4166,16 @@ __metadata:
     ternary-stream: ^2.0.1
     through2: ^2.0.1
   checksum: 34383fbf1f7caa36ff9c52372ab97605e4322d4a06e831ab03153b3a0318cc3ccf96c936468900009ac4e278fe8928e4af0819484b6ce78dd4be8b561717679f
+  languageName: node
+  linkType: hard
+
+"gulp-ignore@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "gulp-ignore@npm:3.0.0"
+  dependencies:
+    gulp-match: ^1.1.0
+    through2: ^3.0.1
+  checksum: 8d1780f4c1d3a353b2fb58bc43cbb13b12172932b7b82cfc8705a0426e73f4b40750d59873a4ff25ad85ca08b0ace918ced5d14f6f2b3f9ec73f75ea5bc6519b
   languageName: node
   linkType: hard
 
@@ -4172,7 +4238,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gulp-match@npm:^1.0.3":
+"gulp-match@npm:^1.0.3, gulp-match@npm:^1.1.0":
   version: 1.1.0
   resolution: "gulp-match@npm:1.1.0"
   dependencies:
@@ -4185,6 +4251,18 @@ __metadata:
   version: 1.0.3
   resolution: "gulp-npm-dist@npm:1.0.3"
   checksum: 29cb9cb6f960b567724cc02c054f4b96459aa3d88f2ef5946e0e794c99467fb4cdb6641eb6bc074f1e8f803e7388383852048064483743249cd25d8f31645bd2
+  languageName: node
+  linkType: hard
+
+"gulp-purgecss@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "gulp-purgecss@npm:5.0.0"
+  dependencies:
+    glob: ^8.0.3
+    plugin-error: ^2.0.0
+    purgecss: ^5.0.0
+    through2: ^4.0.1
+  checksum: 543da4077d899b0f0d14f4c99fdaf48c7d52153a3e9498c045cb34280a5b5da8492d5eaab8a27fb252ebf6065ad69b2f55292776a7c86ce613106cb8441c8e00
   languageName: node
   linkType: hard
 
@@ -4322,6 +4400,19 @@ __metadata:
     through2: ^2.0.0
     vinyl: ^0.5.0
   checksum: b3054c982dfec140665a1abb7d294242465cde37d0055c6ca461720605002e329c3a36d2834bcc5e1161011af751a09cb97bdee692d0cb8e2bbebbf172d5a9e0
+  languageName: node
+  linkType: hard
+
+"gulp-webp@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "gulp-webp@npm:4.0.1"
+  dependencies:
+    imagemin-webp: ^5.0.0
+    plugin-error: ^1.0.1
+    through2: ^3.0.0
+  peerDependencies:
+    gulp: ">=4"
+  checksum: ea9525c0df1233f5f0d5d9b9f9ab3fb7e1385e463fc07e587cd8b6b65a4b30ccbcd941348829f7e4470a7143add4fbd3b82723ae6a11ac692e3ca563e9645632
   languageName: node
   linkType: hard
 
@@ -4704,6 +4795,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"imagemin-webp@npm:^5.0.0":
+  version: 5.1.0
+  resolution: "imagemin-webp@npm:5.1.0"
+  dependencies:
+    cwebp-bin: ^5.0.0
+    exec-buffer: ^3.0.0
+    is-cwebp-readable: ^2.0.1
+  checksum: b57a7074f8bca4f47731bfdb20738e9aaa46c75e6b3e1be8e7735e8d1b68d2f02517da71e596cf1c24b5ec9cfeadea93699fabe0dc811d903b8fbf31f536a74e
+  languageName: node
+  linkType: hard
+
+"imagemin-webp@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "imagemin-webp@npm:7.0.0"
+  dependencies:
+    cwebp-bin: ^7.0.1
+    exec-buffer: ^3.2.0
+    is-cwebp-readable: ^3.0.0
+  checksum: 8f27c83b39936ce91767c6cef73f5f524a3c78db5c736deccfd2990c8d40074079a0a76c0d36220216b2d2e99bbf8a57e1dcdf766fa02ea7648274537597352f
+  languageName: node
+  linkType: hard
+
 "imagemin@npm:^7.0.0":
   version: 7.0.1
   resolution: "imagemin@npm:7.0.1"
@@ -4964,10 +5077,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-callable@npm:^1.1.4, is-callable@npm:^1.2.6":
+"is-callable@npm:^1.1.4, is-callable@npm:^1.2.7":
   version: 1.2.7
   resolution: "is-callable@npm:1.2.7"
   checksum: 61fd57d03b0d984e2ed3720fb1c7a897827ea174bd44402878e059542ea8c4aeedee0ea0985998aa5cc2736b2fa6e271c08587addb5b3959ac52cf665173d1ac
+  languageName: node
+  linkType: hard
+
+"is-cwebp-readable@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "is-cwebp-readable@npm:2.0.1"
+  dependencies:
+    file-type: ^4.3.0
+  checksum: 3dd53537ffcfac0c7599193cfbda80d16ff29397b7b29c03a774f571c4aed8f2de5e1f323f39d213cdf6ddae6f0698107bbb5439dadc4618c2afce9a58885f1a
+  languageName: node
+  linkType: hard
+
+"is-cwebp-readable@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "is-cwebp-readable@npm:3.0.0"
+  dependencies:
+    file-type: ^10.5.0
+  checksum: 768ae017586ba2fb0831d3cc9cfb4cd56c9580b71684ea5584cf61910597c5fe91a419490ed85422424c6339fe9c327df3643c3496145134d4d0385fb479b591
   languageName: node
   linkType: hard
 
@@ -6580,6 +6711,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.3.4":
+  version: 3.3.4
+  resolution: "nanoid@npm:3.3.4"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 2fddd6dee994b7676f008d3ffa4ab16035a754f4bb586c61df5a22cf8c8c94017aadd360368f47d653829e0569a92b129979152ff97af23a558331e47e37cd9c
+  languageName: node
+  linkType: hard
+
 "nanomatch@npm:^1.2.9":
   version: 1.2.13
   resolution: "nanomatch@npm:1.2.13"
@@ -7489,6 +7629,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"plugin-error@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "plugin-error@npm:2.0.0"
+  dependencies:
+    ansi-colors: ^1.0.1
+  checksum: 1602e52b954a434d906b6528b0c525457e316260bd64227aa8c6ba55b9e4fdc0912b1e595de815fd75d296ff6b06bbc214db11175a42e4065312fb1bacbda250
+  languageName: node
+  linkType: hard
+
 "plur@npm:^3.0.1":
   version: 3.1.1
   resolution: "plur@npm:3.1.1"
@@ -7772,6 +7921,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-selector-parser@npm:^6.0.7":
+  version: 6.0.10
+  resolution: "postcss-selector-parser@npm:6.0.10"
+  dependencies:
+    cssesc: ^3.0.0
+    util-deprecate: ^1.0.2
+  checksum: 46afaa60e3d1998bd7adf6caa374baf857cc58d3ff944e29459c9a9e4680a7fe41597bd5b755fc81d7c388357e9bf67c0251d047c640a09f148e13606b8a8608
+  languageName: node
+  linkType: hard
+
 "postcss-svgo@npm:^2.1.1":
   version: 2.1.6
   resolution: "postcss-svgo@npm:2.1.6"
@@ -7862,6 +8021,17 @@ __metadata:
     nanoid: ^3.1.20
     source-map: ^0.6.1
   checksum: 59e6b3533610c2248c66535702b941b52b658a071033d8cfd82857e0edbaf93a62e3464d4e01adedc5d830146441323b6dab3bf15822d20288d8f6f6af6f7be3
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.4":
+  version: 8.4.18
+  resolution: "postcss@npm:8.4.18"
+  dependencies:
+    nanoid: ^3.3.4
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.2
+  checksum: 9349fd99849b2e3d2e134ff949b7770ecb12375f352723ce2bcc06167eba3850ea7844c1b191a85cd915d6a396b4e8ee9a5267e6cc5d8d003d0cbc7a97555d39
   languageName: node
   linkType: hard
 
@@ -7969,6 +8139,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"purgecss@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "purgecss@npm:5.0.0"
+  dependencies:
+    commander: ^9.0.0
+    glob: ^8.0.3
+    postcss: ^8.4.4
+    postcss-selector-parser: ^6.0.7
+  bin:
+    purgecss: bin/purgecss.js
+  checksum: ea1e1d0d33b8a887ad324b0562b6ae73ef69304422f88f95ea2c4a2a73b975c344e6b65dba77e9502c8bc6f1b0ae0512a7a395365724a85c4686415b5f08a580
+  languageName: node
+  linkType: hard
+
 "q@npm:^1.1.2":
   version: 1.5.1
   resolution: "q@npm:1.5.1"
@@ -8062,7 +8246,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:2 || 3, readable-stream@npm:^3.6.0":
+"readable-stream@npm:2 || 3, readable-stream@npm:3, readable-stream@npm:^3.6.0":
   version: 3.6.0
   resolution: "readable-stream@npm:3.6.0"
   dependencies:
@@ -8976,7 +9160,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:>=0.6.2 <2.0.0":
+"source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.2":
   version: 1.0.2
   resolution: "source-map-js@npm:1.0.2"
   checksum: c049a7fc4deb9a7e9b481ae3d424cc793cb4845daa690bc5a05d428bf41bf231ced49b4cf0c9e77f9d42fdb3d20d6187619fc586605f5eabe995a316da8d377c
@@ -9642,13 +9826,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"through2@npm:^3.0.1":
+"through2@npm:^3.0.0, through2@npm:^3.0.1":
   version: 3.0.2
   resolution: "through2@npm:3.0.2"
   dependencies:
     inherits: ^2.0.4
     readable-stream: 2 || 3
   checksum: 47c9586c735e7d9cbbc1029f3ff422108212f7cc42e06d5cc9fff7901e659c948143c790e0d0d41b1b5f89f1d1200bdd200c7b72ad34f42f9edbeb32ea49e8b7
+  languageName: node
+  linkType: hard
+
+"through2@npm:^4.0.1":
+  version: 4.0.2
+  resolution: "through2@npm:4.0.2"
+  dependencies:
+    readable-stream: 3
+  checksum: ac7430bd54ccb7920fd094b1c7ff3e1ad6edd94202e5528331253e5fde0cc56ceaa690e8df9895de2e073148c52dfbe6c4db74cacae812477a35660090960cc0
   languageName: node
   linkType: hard
 
@@ -10032,7 +10225,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"util-deprecate@npm:^1.0.1, util-deprecate@npm:~1.0.1":
+"util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
   checksum: 474acf1146cb2701fe3b074892217553dfcf9a031280919ba1b8d651a068c9b15d863b7303cb15bd00a862b498e6cf4ad7b4a08fb134edd5a6f7641681cb54a2
