@@ -1,29 +1,37 @@
-/* global process */
 'use strict'
+
 const fs = require('fs')
 const path = require('path')
-const findup = require('find-up')
+const findUp = require('find-up')
 const stripJSONComments = require('strip-json-comments')
+
 let config = {}
 const configSources = ['package.json', '.rtlcssrc', '.rtlcss.json']
+const environments = [
+  process.env.USERPROFILE,
+  process.env.HOMEPATH,
+  process.env.HOME
+]
 
-module.exports.load = function (configFilePath, cwd, overrides) {
+const readConfig = (configFilePath) => {
+  return JSON.parse(stripJSONComments(fs.readFileSync(configFilePath, 'utf-8').trim()))
+}
+
+module.exports.load = (configFilePath, cwd, overrides) => {
   if (configFilePath) {
-    return override(
-      JSON.parse(
-        stripJSONComments(
-          fs.readFileSync(configFilePath, 'utf-8').trim())), overrides)
+    return override(readConfig(configFilePath), overrides)
   }
 
   const directory = cwd || process.cwd()
   config = loadConfig(directory)
+
   if (!config) {
-    const evns = [process.env.USERPROFILE, process.env.HOMEPATH, process.env.HOME]
-    for (let x = 0; x < evns.length; x++) {
-      if (!evns[x]) {
+    for (const environment of environments) {
+      if (!environment) {
         continue
       }
-      config = loadConfig(evns[x])
+
+      config = loadConfig(environment)
       if (config) {
         break
       }
@@ -33,27 +41,27 @@ module.exports.load = function (configFilePath, cwd, overrides) {
   if (config) {
     override(config, overrides)
   }
+
   return config
 }
 
-function loadConfig (dir) {
-  for (let x = 0; x < configSources.length; x++) {
-    let found
-    const source = configSources[x]
+function loadConfig (cwd) {
+  for (const source of configSources) {
+    let foundPath
+
     try {
-      found = findup.sync(dir, source)
+      foundPath = findUp.sync(source, { cwd })
     } catch (e) {
       continue
     }
 
-    if (found) {
-      const configFilePath = path.normalize(path.join(found, source))
+    if (foundPath) {
+      const configFilePath = path.normalize(foundPath)
+
       try {
-        config = JSON.parse(
-          stripJSONComments(
-            fs.readFileSync(configFilePath, 'utf-8').trim()))
+        config = readConfig(configFilePath)
       } catch (e) {
-        throw new Error(e + ' ' + configFilePath)
+        throw new Error(`${e} ${configFilePath}`)
       }
 
       if (source === 'package.json') {
@@ -70,12 +78,15 @@ function loadConfig (dir) {
 function override (to, from) {
   if (to && from) {
     for (const p in from) {
-      if (typeof to[p] === 'object') {
-        override(to[p], from[p])
-      } else {
-        to[p] = from[p]
+      if (Object.prototype.hasOwnProperty.call(from, p)) {
+        if (Object.prototype.hasOwnProperty.call(to, p) && typeof to[p] === 'object') {
+          override(to[p], from[p])
+        } else {
+          to[p] = from[p]
+        }
       }
     }
   }
+
   return to
 }

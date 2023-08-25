@@ -67,7 +67,6 @@ File: Main Css File
   .navbar .navbar-nav .nav-item .nav-link {
     padding: 8px 15px;
   }
-
   .navbar-collapse {
     max-height: 385px;
     overflow-y: auto;
@@ -111,7 +110,6 @@ File: Main Css File
   .navbar {
     margin-top: 0px;
   }
-
   .top-bar {
     display: none;
   }
@@ -396,7 +394,6 @@ File: Main Css File
   .container {
     max-width: 1140px !important;
   }
-
   .custom-container {
     max-width: 90%;
   }
@@ -562,7 +559,6 @@ File: Main Css File
 }
 
 @media (min-width: 992px) {
-
   .registration-form {
     position: relative;
   }
@@ -952,20 +948,16 @@ File: Main Css File
   border-color: rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.1);
 }
-.auth-box .auth-form .form-control::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
+.auth-box .auth-form .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: rgba(255, 255, 255, 0.45);
 }
-.auth-box .auth-form .form-control::-moz-placeholder {
-  /* Firefox 19+ */
+.auth-box .auth-form .form-control::-moz-placeholder { /* Firefox 19+ */
   color: rgba(255, 255, 255, 0.45);
 }
-.auth-box .auth-form .form-control:-ms-input-placeholder {
-  /* IE 10+ */
+.auth-box .auth-form .form-control:-ms-input-placeholder { /* IE 10+ */
   color: rgba(255, 255, 255, 0.45);
 }
-.auth-box .auth-form .form-control:-moz-placeholder {
-  /* Firefox 18- */
+.auth-box .auth-form .form-control:-moz-placeholder { /* Firefox 18- */
   color: rgba(255, 255, 255, 0.45);
 }
 

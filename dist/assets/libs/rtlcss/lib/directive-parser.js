@@ -1,4 +1,6 @@
-module.exports = function (comment) {
+'use strict'
+
+module.exports = (comment) => {
   let pos = 0
   let value = comment.text
   const match = value.match(/^\s*!?\s*rtl:/)
@@ -39,5 +41,6 @@ module.exports = function (comment) {
       meta.name = value
     }
   }
+
   return meta
 }
