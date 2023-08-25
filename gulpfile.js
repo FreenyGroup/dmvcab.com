@@ -286,7 +286,6 @@ gulp.task(
       'jsPages',
       'html'
     ),
-    gulp.parallel('purgecss'),
-    gulp.parallel('browsersync', 'watch')
+    gulp.parallel('purgecss')
   )
 );
