@@ -287,5 +287,6 @@ gulp.task(
       'html'
     ),
     gulp.parallel('purgecss')
+    //gulp.parallel('browsersync', 'watch')
   )
 );
