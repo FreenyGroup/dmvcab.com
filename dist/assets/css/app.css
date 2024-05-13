@@ -476,6 +476,14 @@ body[data-layout-mode=dark] .bg-footer, body[data-layout-mode=dark] .footer-alt 
   border-color: #fff !important;
 }
 
+.bg-soft-main-blue {
+  background-color: rgba(22, 49, 88, 0.15) !important;
+  color: #163158 !important;
+}
+.bg-soft-main-blue .border {
+  border-color: #163158 !important;
+}
+
 .section {
   padding-top: 80px;
   padding-bottom: 80px;

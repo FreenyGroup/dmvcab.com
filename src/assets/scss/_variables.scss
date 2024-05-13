@@ -22,7 +22,7 @@ $font-family-secondary: 'Dancing Script', cursive;
 // darl layout close btn
 $btn-close-bg-dark: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$white}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>");
 
-// 
+//
 // Dark theme Layout
 //
 
@@ -85,6 +85,7 @@ $green:   #02af74;
 $green-dark: #048565;
 $teal:    #050505;
 $cyan:    #5fd0f3;
+$main-blue: #163158;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -102,7 +103,8 @@ $colors: (
     "cyan":       $cyan,
     "white":      $white,
     "gray":       $gray-600,
-    "gray-dark":  $gray-800
+    "gray-dark":  $gray-800,
+    "main-blue": $main-blue,
 );
 // scss-docs-end colors-map
 // scss-docs-start theme-color-variables
@@ -118,6 +120,7 @@ $dark:          $gray-800;
 $purple:        $purple;
 $blue:          $blue;
 $green-dark:    $green-dark;
+$main-blue: $main-blue;
 
 // scss-docs-end theme-color-variables
 $theme-colors: (
@@ -134,6 +137,7 @@ $theme-colors: (
     "blue":       $blue,
     "green-dark": $green-dark,
     "white":      $white,
+    "main-blue": $main-blue,
 );
 
 // scss-docs-end theme-colors-map
@@ -648,7 +652,7 @@ $h6-font-size:                $font-size-base;
 // scss-docs-start font-sizes
 $font-sizes: (
   1: $h1-font-size,
-  2: $h2-font-size, 
+  2: $h2-font-size,
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
