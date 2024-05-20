@@ -336,6 +336,10 @@ File: Main Css File
   margin-bottom: -1px;
 }
 
+.table th {
+  font-weight: 500;
+}
+
 .form-text {
   margin-top: 0.25rem;
   font-size: 0.95rem;

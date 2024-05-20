@@ -275,6 +275,34 @@ svg {
   vertical-align: middle;
 }
 
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #74788d;
+  text-align: left;
+}
+
+th {
+  font-weight: 500;
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+thead,
+tbody,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
 label {
   display: inline-block;
 }
@@ -641,6 +669,44 @@ progress {
             flex: 0 0 auto;
     width: 83.33333333%;
   }
+}
+.table {
+  --bs-table-color-type: initial;
+  --bs-table-bg-type: initial;
+  --bs-table-color-state: initial;
+  --bs-table-bg-state: initial;
+  --bs-table-color: #495057;
+  --bs-table-bg: var(--bs-body-bg);
+  --bs-table-border-color: #eff0f2;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #495057;
+  --bs-table-striped-bg: #f8f9fa;
+  --bs-table-active-color: #495057;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #495057;
+  --bs-table-hover-bg: #f8f9fa;
+  width: 100%;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  border-color: var(--bs-table-border-color);
+}
+.table > :not(caption) > * > * {
+  padding: 0.75rem 0.75rem;
+  color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
+  -webkit-box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
+          box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
+}
+.table > tbody {
+  vertical-align: inherit;
+}
+.table > thead {
+  vertical-align: bottom;
+}
+
+.caption-top {
+  caption-side: top;
 }
 .form-label {
   margin-bottom: 0.5rem;

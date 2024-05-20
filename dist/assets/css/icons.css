@@ -29,6 +29,10 @@ File: Icons Css File
   content: "\f005d";
 }
 
+.mdi-auto-download::before {
+  content: "\f137e";
+}
+
 .mdi-check-bold::before {
   content: "\f0e1e";
 }
@@ -39,6 +43,14 @@ File: Icons Css File
 
 .mdi-chevron-right::before {
   content: "\f0142";
+}
+
+.mdi-download::before {
+  content: "\f01da";
+}
+
+.mdi-download-box::before {
+  content: "\f1462";
 }
 
 .mdi-eye::before {
